@@ -1,77 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>TempMate | Temperature Converter</title>
-
-    <link rel="stylesheet" href="temp-style.css">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="Temp.css">
 </head>
-
 <body>
 
-    <main class="converter-wrapper">
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <p>Convert temperature between Celsius, Fahrenheit and Kelvin.</p>
 
-        <div class="heading">
-            <span class="icon">🌡️</span>
-            <h1>TempMate</h1>
-            <p>Quick and simple temperature conversion</p>
-        </div>
+        <label for="temperature">Enter Temperature</label>
+        <input type="number" id="temperature" placeholder="Enter value">
 
-        <div class="converter-card">
+        <label for="fromUnit">From</label>
+        <select id="fromUnit">
+            <option value="C">Celsius (°C)</option>
+            <option value="F">Fahrenheit (°F)</option>
+            <option value="K">Kelvin (K)</option>
+        </select>
 
-            <label for="tempInput">Temperature</label>
+        <label for="toUnit">To</label>
+        <select id="toUnit">
+            <option value="F">Fahrenheit (°F)</option>
+            <option value="C">Celsius (°C)</option>
+            <option value="K">Kelvin (K)</option>
+        </select>
 
-            <input
-                type="number"
-                id="tempInput"
-                placeholder="Enter temperature"
-            >
+        <button onclick="convertTemperature()">Convert</button>
 
-            <div class="unit-section">
+        <div id="result">Result will appear here</div>
+    </div>
 
-                <div>
-                    <label for="inputUnit">From</label>
-
-                    <select id="inputUnit">
-                        <option value="celsius">Celsius (°C)</option>
-                        <option value="fahrenheit">Fahrenheit (°F)</option>
-                        <option value="kelvin">Kelvin (K)</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="outputUnit">To</label>
-
-                    <select id="outputUnit">
-                        <option value="fahrenheit">Fahrenheit (°F)</option>
-                        <option value="celsius">Celsius (°C)</option>
-                        <option value="kelvin">Kelvin (K)</option>
-                    </select>
-                </div>
-
-            </div>
-
-            <button id="convertBtn">
-                Convert Now
-            </button>
-
-            <div id="result" class="result">
-                Enter a value to see the result.
-            </div>
-
-        </div>
-
-    </main>
-
-    <footer>
-        <p>Web Development & Designing • Level 1 Task 3</p>
-    </footer>
-
-    <script src="temp-script.js"></script>
-
+    <script src="Temp.js"></script>
 </body>
-
 </html>
